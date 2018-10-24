@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.http.response import HttpResponse
- 
-def index_template(request):
-    return render(request, 'index.html')
+from django.views.generic import TemplateView
+
+class SampleTemplateView(TemplateView):
+    template_name = "myapp/index.html"

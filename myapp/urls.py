@@ -1,7 +1,8 @@
-from django.conf.urls import include, url
-from django.contrib import admin
- 
+from django.urls import path
+
+from . import views
+
 urlpatterns = [
-    url('myapp/', include('myapp.urls', namespace='myapp')),
-    url('admin/', admin.site.urls),
+    path('', views.SampleTemplateView.as_view(), name='index')
+    
 ]
